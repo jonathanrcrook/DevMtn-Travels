@@ -1,5 +1,11 @@
 angular.module('devmtnTravel').service('mainSrv', function(){
-
+    this.findPackage = function(id) {
+      for (var i = 0; i < this.travelInfo.length; i++) {
+        if (this.travelInfo[i].id == id) {
+          return this.travelInfo[i];
+        }
+      }
+    }
     this.travelInfo = [{
         city: 'New York',
         country: 'United States',
